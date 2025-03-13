@@ -6,13 +6,15 @@ bool is_perfect_number(int number) {
 		return false;
 	}
 
-	int n = number / 2;
-	int s = 1;
+	int s = 0;
 
-	for (int i = 2; i <= n; i++)
+	for (int i = number / 2; i >= 1; i--)
 	{
 		if (number % i == 0) {
 			s += i;
+		}
+		if (s > number) {
+			return false;
 		}
 	}
 
