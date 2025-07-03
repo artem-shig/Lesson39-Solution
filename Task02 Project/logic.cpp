@@ -2,21 +2,21 @@
 
 bool is_perfect_number(int number) {
 
-	if (number <= 1) {
+	if (number <= 1 || number % 2 != 0) {
 		return false;
 	}
 
-	int s = 0;
+	int sum = 0;
 
 	for (int i = number / 2; i >= 1; i--)
 	{
 		if (number % i == 0) {
-			s += i;
+			sum += i;
 		}
-		if (s > number) {
+		if (sum > number) {
 			return false;
 		}
 	}
 
-	return number == s;
+	return number == sum;
 }

@@ -10,7 +10,7 @@ int main() {
 
 	string msg = is_perfect_number(number) ? "is" : "is not";
 
-	cout << number << " - " << msg << " Perfect number.\n";
+	cout << number << " - " << msg << " perfect number.\n";
 
 	return 0;
 }
